@@ -69,13 +69,13 @@ const DEFAULT_DEFINES: &'static [CDefine] = &[
     ("MBEDTLS_NO_UDBL_DIVISION",                          Undefined),
     ("MBEDTLS_NO_64BIT_MULTIPLICATION",                   Undefined),
     ("MBEDTLS_HAVE_SSE2",                                 Undefined),
-    ("MBEDTLS_HAVE_TIME",                                 Defined),
+    ("MBEDTLS_HAVE_TIME",                                 Undefined),
     ("MBEDTLS_HAVE_TIME_DATE",                            Undefined),
     ("MBEDTLS_PLATFORM_MEMORY",                           Undefined),
     ("MBEDTLS_PLATFORM_NO_STD_FUNCTIONS",                 Undefined),
     ("MBEDTLS_PLATFORM_SETBUF_ALT",                       Undefined),
     ("MBEDTLS_PLATFORM_EXIT_ALT",                         Undefined),
-    ("MBEDTLS_PLATFORM_TIME_ALT",                         Defined),
+    ("MBEDTLS_PLATFORM_TIME_ALT",                         Undefined),
     ("MBEDTLS_PLATFORM_FPRINTF_ALT",                      Undefined),
     ("MBEDTLS_PLATFORM_PRINTF_ALT",                       Undefined),
     ("MBEDTLS_PLATFORM_SNPRINTF_ALT",                     Undefined),
@@ -397,7 +397,7 @@ pub fn default_defines() -> HashMap<&'static str, Macro> {
 
 #[cfg_attr(rustfmt, rustfmt_skip)]
 pub const FEATURE_DEFINES: &'static [(&'static str, CDefine)] = &[
-    ("time",                  ("MBEDTLS_HAVE_TIME",                         Defined)),
+    ("time",                  ("MBEDTLS_HAVE_TIME",                         Undefined)),
     ("time",                  ("MBEDTLS_HAVE_TIME_DATE",                    Undefined)),
     ("threading",             ("MBEDTLS_THREADING_C",                       Defined)),
     ("debug",                 ("MBEDTLS_DEBUG_C",                           Defined)),
@@ -428,10 +428,10 @@ pub const FEATURE_DEFINES: &'static [(&'static str, CDefine)] = &[
 #[cfg_attr(rustfmt, rustfmt_skip)]
 pub const PLATFORM_DEFINES: &'static [(&'static str, &'static str, CDefine)] = &[
     ("time",      "libc",     ("MBEDTLS_TIMING_C",                          Defined)),
-    ("time",      "custom",   ("MBEDTLS_PLATFORM_TIME_MACRO",               DefinedAs("mbedtls_time"))),
+    ("time",      "custom",   ("MBEDTLS_PLATFORM_TIME_MACRO",               Undefined)),
     ("time",      "custom",   ("MBEDTLS_PLATFORM_TIME_TYPE_MACRO",          Undefined)),
-    ("time",      "custom",   ("MBEDTLS_PLATFORM_GMTIME_R_ALT",             Defined)),
-    ("time",      "custom",   ("MBEDTLS_PLATFORM_MS_TIME_ALT",              Defined)),
+    ("time",      "custom",   ("MBEDTLS_PLATFORM_GMTIME_R_ALT",             Undefined)),
+    ("time",      "custom",   ("MBEDTLS_PLATFORM_MS_TIME_ALT",              Undefined)),
     ("threading", "pthread",  ("MBEDTLS_THREADING_PTHREAD",                 Defined)),
     ("threading", "custom",   ("MBEDTLS_THREADING_IMPL",                    Defined)),
     ("std",       "net",      ("MBEDTLS_NET_C",                             Undefined)),

@@ -427,7 +427,7 @@ pub const FEATURE_DEFINES: &'static [(&'static str, CDefine)] = &[
 
 #[cfg_attr(rustfmt, rustfmt_skip)]
 pub const PLATFORM_DEFINES: &'static [(&'static str, &'static str, CDefine)] = &[
-    ("time",      "libc",     ("MBEDTLS_TIMING_C",                          Defined)),
+    ("time",      "libc",     ("MBEDTLS_TIMING_C",                          Undefined)),
     ("time",      "custom",   ("MBEDTLS_PLATFORM_TIME_MACRO",               Undefined)),
     ("time",      "custom",   ("MBEDTLS_PLATFORM_TIME_TYPE_MACRO",          Undefined)),
     ("time",      "custom",   ("MBEDTLS_PLATFORM_GMTIME_R_ALT",             Undefined)),

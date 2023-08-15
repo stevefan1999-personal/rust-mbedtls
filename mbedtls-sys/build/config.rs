@@ -350,7 +350,7 @@ const DEFAULT_DEFINES: &'static [CDefine] = &[
     ("MBEDTLS_PLATFORM_EXIT_MACRO",                       Undefined), // default: exit
     ("MBEDTLS_PLATFORM_SETBUF_MACRO",                     Undefined), // default: setbuf
     ("MBEDTLS_PLATFORM_TIME_MACRO",                       Undefined), // default: time
-    ("MBEDTLS_PLATFORM_TIME_TYPE_MACRO",                  DefinedAs("long long")), // default: time_t
+    ("MBEDTLS_PLATFORM_TIME_TYPE_MACRO",                  Undefined), // default: time_t
     ("MBEDTLS_PLATFORM_FPRINTF_MACRO",                    Undefined), // default: fprintf
     ("MBEDTLS_PLATFORM_PRINTF_MACRO",                     Undefined), // default: printf
     ("MBEDTLS_PLATFORM_SNPRINTF_MACRO",                   Undefined), // default: snprintf
@@ -429,7 +429,7 @@ pub const FEATURE_DEFINES: &'static [(&'static str, CDefine)] = &[
 pub const PLATFORM_DEFINES: &'static [(&'static str, &'static str, CDefine)] = &[
     ("time",      "libc",     ("MBEDTLS_TIMING_C",                          Defined)),
     ("time",      "custom",   ("MBEDTLS_PLATFORM_TIME_MACRO",               DefinedAs("mbedtls_time"))),
-    ("time",      "custom",   ("MBEDTLS_PLATFORM_TIME_TYPE_MACRO",          DefinedAs("long long"))),
+    ("time",      "custom",   ("MBEDTLS_PLATFORM_TIME_TYPE_MACRO",          Undefined)),
     ("time",      "custom",   ("MBEDTLS_PLATFORM_GMTIME_R_ALT",             Defined)),
     ("time",      "custom",   ("MBEDTLS_PLATFORM_MS_TIME_ALT",              Defined)),
     ("threading", "pthread",  ("MBEDTLS_THREADING_PTHREAD",                 Defined)),

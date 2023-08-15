@@ -436,7 +436,7 @@ pub const PLATFORM_DEFINES: &'static [(&'static str, &'static str, CDefine)] = &
     ("threading", "custom",   ("MBEDTLS_THREADING_IMPL",                    Defined)),
     ("std",       "net",      ("MBEDTLS_NET_C",                             Defined)),
     ("std",       "fs",       ("MBEDTLS_FS_IO",                             Defined)),
-    ("std",       "entropy",  ("MBEDTLS_NO_PLATFORM_ENTROPY",               Undefined)),
+    ("std",       "entropy",  ("MBEDTLS_NO_PLATFORM_ENTROPY",               Defined)),
     ("std",       "entropy",  ("MBEDTLS_PSA_CRYPTO_EXTERNAL_RNG",           Undefined)),
     ("std",       "entropy",  ("MBEDTLS_ENTROPY_C",                         Defined)),
 ];

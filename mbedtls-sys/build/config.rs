@@ -397,8 +397,8 @@ pub fn default_defines() -> HashMap<&'static str, Macro> {
 
 #[cfg_attr(rustfmt, rustfmt_skip)]
 pub const FEATURE_DEFINES: &'static [(&'static str, CDefine)] = &[
-    ("time",                  ("MBEDTLS_HAVE_TIME",                         Defined)),
-    ("time",                  ("MBEDTLS_HAVE_TIME_DATE",                    Defined)),
+    ("time",                  ("MBEDTLS_HAVE_TIME",                         Undefined)),
+    ("time",                  ("MBEDTLS_HAVE_TIME_DATE",                    Undefined)),
     ("threading",             ("MBEDTLS_THREADING_C",                       Defined)),
     ("debug",                 ("MBEDTLS_DEBUG_C",                           Defined)),
     ("custom_printf",         ("MBEDTLS_PLATFORM_C",                        Defined)),

@@ -75,7 +75,7 @@ const DEFAULT_DEFINES: &'static [CDefine] = &[
     ("MBEDTLS_PLATFORM_NO_STD_FUNCTIONS",                 Undefined),
     ("MBEDTLS_PLATFORM_SETBUF_ALT",                       Undefined),
     ("MBEDTLS_PLATFORM_EXIT_ALT",                         Undefined),
-    ("MBEDTLS_PLATFORM_TIME_ALT",                         Undefined),
+    ("MBEDTLS_PLATFORM_TIME_ALT",                         Defined),
     ("MBEDTLS_PLATFORM_FPRINTF_ALT",                      Undefined),
     ("MBEDTLS_PLATFORM_PRINTF_ALT",                       Undefined),
     ("MBEDTLS_PLATFORM_SNPRINTF_ALT",                     Undefined),
@@ -350,7 +350,7 @@ const DEFAULT_DEFINES: &'static [CDefine] = &[
     ("MBEDTLS_PLATFORM_EXIT_MACRO",                       Undefined), // default: exit
     ("MBEDTLS_PLATFORM_SETBUF_MACRO",                     Undefined), // default: setbuf
     ("MBEDTLS_PLATFORM_TIME_MACRO",                       Undefined), // default: time
-    ("MBEDTLS_PLATFORM_TIME_TYPE_MACRO",                  Undefined), // default: time_t
+    ("MBEDTLS_PLATFORM_TIME_TYPE_MACRO",                  DefinedAs("long long")), // default: time_t
     ("MBEDTLS_PLATFORM_FPRINTF_MACRO",                    Undefined), // default: fprintf
     ("MBEDTLS_PLATFORM_PRINTF_MACRO",                     Undefined), // default: printf
     ("MBEDTLS_PLATFORM_SNPRINTF_MACRO",                   Undefined), // default: snprintf

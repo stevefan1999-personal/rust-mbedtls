@@ -69,7 +69,7 @@ const DEFAULT_DEFINES: &'static [CDefine] = &[
     ("MBEDTLS_NO_UDBL_DIVISION",                          Undefined),
     ("MBEDTLS_NO_64BIT_MULTIPLICATION",                   Undefined),
     ("MBEDTLS_HAVE_SSE2",                                 Undefined),
-    ("MBEDTLS_HAVE_TIME",                                 Undefined),
+    ("MBEDTLS_HAVE_TIME",                                 Defined),
     ("MBEDTLS_HAVE_TIME_DATE",                            Undefined),
     ("MBEDTLS_PLATFORM_MEMORY",                           Undefined),
     ("MBEDTLS_PLATFORM_NO_STD_FUNCTIONS",                 Undefined),
@@ -397,7 +397,7 @@ pub fn default_defines() -> HashMap<&'static str, Macro> {
 
 #[cfg_attr(rustfmt, rustfmt_skip)]
 pub const FEATURE_DEFINES: &'static [(&'static str, CDefine)] = &[
-    ("time",                  ("MBEDTLS_HAVE_TIME",                         Undefined)),
+    ("time",                  ("MBEDTLS_HAVE_TIME",                         Defined)),
     ("time",                  ("MBEDTLS_HAVE_TIME_DATE",                    Undefined)),
     ("threading",             ("MBEDTLS_THREADING_C",                       Defined)),
     ("debug",                 ("MBEDTLS_DEBUG_C",                           Defined)),
